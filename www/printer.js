@@ -1,19 +1,12 @@
 var exec = require('cordova/exec');
 
 var POSPrinter = {
-    printData: function(ip, port, data) {
-        return new Promise(function(resolve, reject) {
-            exec(resolve, reject, 'POSPrinterPlugin', 'printData', [ip, port, data]);
+    print: function(ip, port, data) {
+        return new Promise((resolve, reject) => {
+            exec(resolve, reject, 'POSPrinter', 'print', [ip, port, data]);
         });
     },
 
-    testConnection: function(ip, port) {
-        return new Promise(function(resolve, reject) {
-            exec(resolve, reject, 'POSPrinterPlugin', 'testConnection', [ip, port]);
-        });
-    },
-
-    // Helper function to format TSPL commands
     formatTSPL: function(content) {
         var command = "SIZE 80 mm, 60 mm\n" +
                      "GAP 3 mm, 0 mm\n" +
