@@ -1,20 +1,20 @@
 {
-  "name": "alpha-printer-plugin",
+  "name": "alpha-pos-printer",
   "version": "1.0.0",
-  "description": "Alpha Anywhere Printer Plugin",
+  "description": "Alpha Anywhere POS Printer Plugin",
   "cordova": {
-    "id": "alpha-printer-plugin",
+    "id": "alpha-pos-printer",
     "platforms": [
       "android"
     ]
   },
   "keywords": [
-    "cordova",
-    "printer",
-    "alpha anywhere",
-    "pos printer"
+    "ecosystem:cordova",
+    "cordova-android",
+    "alpha-anywhere",
+    "pos-printer",
+    "printer"
   ],
-  "engines": {
-    "cordova": ">=3.0.0"
-  }
+  "author": "Your Name",
+  "license": "MIT"
 }
