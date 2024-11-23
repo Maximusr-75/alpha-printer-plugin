@@ -1,30 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="alpha-printer-plugin" 
+<plugin id="cordova-plugin-pos-printer" 
         version="1.0.0" 
         xmlns="http://apache.org/cordova/ns/plugins/1.0">
     
-    <name>POSPrinterPlugin</name>
-    <description>Alpha Anywhere POS Printer Plugin</description>
+    <name>POSPrinter</name>
+    <description>POS Printer Plugin for Alpha Anywhere</description>
     
-    <js-module name="POSPrinterPlugin" src="www/printer.js">
-        <clobbers target="cordova.plugins.POSPrinter" />
+    <js-module name="POSPrinter" src="www/printer.js">
+        <clobbers target="window.POSPrinter" />
     </js-module>
     
     <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="POSPrinterPlugin">
-                <param name="android-package" value="com.alphaplugin.printer.POSPrinterPlugin"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="POSPrinter">
+                <param name="android-package" value="com.printer.pos.POSPrinterPlugin"/>
             </feature>
         </config-file>
         
-        <config-file parent="/*" target="AndroidManifest.xml">
+        <source-file src="src/android/com/printer/pos/POSPrinterPlugin.java" 
+                     target-dir="src/com/printer/pos" />
+                     
+        <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET" />
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         </config-file>
-        
-        <framework src="com.android.support:support-v4:+" />
-        
-        <source-file src="src/android/com/alphaplugin/printer/POSPrinterPlugin.java" 
-                     target-dir="src/com/alphaplugin/printer" />
     </platform>
 </plugin>
