@@ -1,0 +1,20 @@
+{
+  "name": "alpha-printer-plugin",
+  "version": "1.0.0",
+  "description": "Alpha Anywhere Printer Plugin",
+  "cordova": {
+    "id": "alpha-printer-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "printer",
+    "alpha anywhere",
+    "pos printer"
+  ],
+  "engines": {
+    "cordova": ">=3.0.0"
+  }
+}
