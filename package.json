@@ -1,12 +1,17 @@
 {
-  "name": "alpha-pos-printer",
+  "name": "@yourusername/alpha-printer-plugin",
   "version": "1.0.0",
   "description": "Alpha Anywhere POS Printer Plugin",
+  "main": "www/printer.js",
   "cordova": {
-    "id": "alpha-pos-printer",
+    "id": "alpha-printer-plugin",
     "platforms": [
       "android"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/alpha-printer-plugin.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -16,5 +21,12 @@
     "printer"
   ],
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/alpha-printer-plugin/issues"
+  },
+  "homepage": "https://github.com/yourusername/alpha-printer-plugin#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
