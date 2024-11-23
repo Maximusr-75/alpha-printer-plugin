@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="alpha-printer-plugin"
+        version="1.0.0">
+    
+    <name>PrinterPlugin</name>
+    <description>Alpha Anywhere Printer Plugin</description>
+    
+    <js-module src="www/printer.js" name="PrinterPlugin">
+        <clobbers target="PrinterPlugin" />
+    </js-module>
+    
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PrinterPlugin">
+                <param name="android-package" value="com.alphaprinter.PrinterPlugin"/>
+            </feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+        
+        <source-file src="src/android/com/alphaprinter/PrinterPlugin.java" 
+                     target-dir="src/com/alphaprinter" />
+        <source-file src="src/android/com/alphaprinter/PrinterActivity.java" 
+                     target-dir="src/com/alphaprinter" />
+    </platform>
+</plugin>
